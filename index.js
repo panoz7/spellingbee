@@ -29,7 +29,6 @@ let pangramIndex = [];
 
 // Get just the panagrams
 const panagrams = matches.filter((word, k) => {
-    console.log(k, word);
 
     for (const letter of otherLetters) {
         if (word.indexOf(letter) === -1) return false;
