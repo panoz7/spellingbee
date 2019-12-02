@@ -58,7 +58,7 @@ panagrams.forEach((match, k) => {
 })
 
 console.log("\n----------------------\n")
-console.log(`${matches.length} Other Word${panagrams.length == 1 ? '' : 's'}:\n`);
+console.log(`${matches.length} Other Word${matches.length == 1 ? '' : 's'}:\n`);
 
 matches.forEach((match, k) => {
     console.log(`${k + 1}:\t ${match}`)
