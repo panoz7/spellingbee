@@ -1,0 +1,1 @@
+Bookmarklets can be downloaded here: [bookmarklets.html](https://panoz7.github.io/spellingbee/bookmarklets.html)
