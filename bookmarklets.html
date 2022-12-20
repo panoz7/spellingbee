@@ -1,4 +1,4 @@
-<!-- MAX POINTS -->
+MAX POINTS
 <!-- alert(`Total Words: ${window.gameData.today.answers.length}\n Panagrams: ${window.gameData.today.pangrams.length}\n Max Points: ${window.gameData.today.answers.reduce((acc,cur) => acc + (cur.length == 4 ? 1 : cur.length), 0) + 
             window.gameData.today.pangrams.reduce((acc, cur) => acc + cur.length, 0)}`) -->
 
@@ -117,7 +117,7 @@ alert (strings.join("\n")); -->
 <a href="javascript:(function()%7Bconst%20letters%20%3D%20gameData.today.validLetters%3Blet%20foundWords%20%3D%20%5B%5D%3Bconst%20lis%20%3D%20document.getElementsByClassName('sb-wordlist-items-pag')%5B0%5D.getElementsByTagName('li')%3Bfor%20(let%20li%20of%20lis)%20%7BfoundWords.push(li.textContent)%3B%7Dconst%20allWords%20%3D%20window.gameData.today.answers%3Bconst%20validWords%20%3D%20allWords.filter(word%20%3D%3E%20foundWords.indexOf(word)%20%3C%200)%3Blet%20counts%20%3D%20%7B%7D%3Bletters.forEach(letter%20%3D%3E%20counts%5Bletter%5D%20%3D%20%5B%5D)%3Blet%20longestWordLength%20%3D%200%3BvalidWords.forEach(word%20%3D%3E%20%7Blet%20letterCounts%20%3D%20counts%5Bword%5B0%5D%5D%3Bif%20(letterCounts%5Bword.length%5D)%20letterCounts%5Bword.length%5D%20%2B%3D%201%3Belse%20letterCounts%5Bword.length%5D%20%3D%201%3Bif%20(counts%5Bword.length%5D)%20counts%5Bword.length%5D%20%2B%3D%201%3Belse%20counts%5Bword.length%5D%20%3D%201%3Bif%20(word.length%20%3E%20longestWordLength)%20longestWordLength%20%3D%20word.length%3B%7D)%3Blet%20strings%20%3D%20%5B%5D%3Blet%20heading%20%3D%20'%5Ct'%3Bfor%20(let%20i%20%3D%204%3B%20i%20%3C%3D%20longestWordLength%3B%20i%2B%2B)%20%7Bheading%20%2B%3D%20i%20%2B'%5Ct'%3B%7D%3Bstrings.push(heading)%3Bletters.forEach(letter%20%3D%3E%20%7Blet%20string%20%3D%20letter.toUpperCase()%20%2B%20'%5Ct'%3Bfor%20(let%20i%20%3D%204%3B%20i%20%3C%3D%20longestWordLength%3B%20i%2B%2B)%20%7Bstring%20%2B%3D%20counts%5Bletter%5D%5Bi%5D%20%3F%20counts%5Bletter%5D%5Bi%5D%20%3A%20'-'%3Bstring%20%2B%3D%20%22%5Ct%22%3B%7Dstring%20%2B%3D%20counts%5Bletter%5D.reduce((cur%2C%20acc)%20%3D%3E%20cur%20%2B%20acc%2C%200)%3Bstrings.push(string)%3B%7D)%3Blet%20string%20%3D%20'%5Ct'%3Bfor%20(let%20i%20%3D%204%3B%20i%20%3C%3D%20longestWordLength%3B%20i%2B%2B)%20%7Bstring%20%2B%3D%20counts%5Bi%5D%20%3F%20counts%5Bi%5D%20%3A%20'0'%3Bstring%20%2B%3D%20%22%5Ct%22%3B%7D%3Bstring%20%2B%3D%20validWords.length%3Bstrings.push(string)%3Balert%20(strings.join(%22%5Cn%22))%7D)()">SB - Word Matrix (missing words)</a>
 
 
-let foundWords = [];
+<!-- let foundWords = [];
 const lis = document.getElementsByClassName('sb-wordlist-items-pag')[0].getElementsByTagName('li');
 for (let li of lis) {
     foundWords.push(li.textContent);
@@ -137,6 +137,6 @@ fetch('https://griffinfriedman.com/spelling-bee/api/v1.php', {
 }).then(response => console.log)
 .catch(e => console.log)
 
-window.open('https://griffinfriedman.com/spelling-bee')
+window.open('https://griffinfriedman.com/spelling-bee') -->
 
 <a href="javascript:(function()%7Blet%20foundWords%20%3D%20%5B%5D%3B%0Aconst%20lis%20%3D%20document.getElementsByClassName('sb-wordlist-items-pag')%5B0%5D.getElementsByTagName('li')%3B%0Afor%20(let%20li%20of%20lis)%20%7B%0A%20%20%20%20foundWords.push(li.textContent)%3B%0A%7D%0A%0Aconst%20name%20%3D%20prompt(%22What%20is%20your%20name%3F%22)%3B%0A%0Aconst%20data%20%3D%20%7B%0A%20%20%20%20user_name%3A%20name%2C%20%0A%20%20%20%20words%3A%20foundWords%0A%7D%0A%0Afetch('https%3A%2F%2Fgriffinfriedman.com%2Fspelling-bee%2Fapi%2Fv1.php'%2C%20%7B%0A%20%20%20%20method%3A%20'POST'%2C%0A%20%20%20%20mode%3A%20'cors'%2C%20%0A%20%20%20%20body%3A%20JSON.stringify(data)%0A%7D).then(response%20%3D%3E%20console.log)%0A.catch(e%20%3D%3E%20console.log)%0A%0Awindow.open('https%3A%2F%2Fgriffinfriedman.com%2Fspelling-bee')%7D)()%3B">SB - Compare</a>
