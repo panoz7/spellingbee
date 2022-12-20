@@ -1,0 +1,63 @@
+body {
+    font-family: verdana;
+    font-size: 13px;
+    color: #222;
+    padding: 20px;
+}
+
+#comparison {
+    display: flex;
+}
+
+#comparison div {
+    flex-grow: 1;
+}
+
+#comparison ul { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#comparison ul li {
+    padding: 5px 0px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+li.missing {
+    color: #ddd;
+    text-decoration: line-through
+}
+
+li.unique {
+    color: rgb(0, 146, 214);
+    font-weight: bold;
+}
+
+h2 {
+    display: inline-block;
+}
+
+button {
+    background-color: #ddd;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    padding: 0;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -3px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(0, 146, 214);
+    color: white;
+}
