@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+
+:root {
+    --border-color: #ccc;
+    --sb-yellow: #f7da21;
+    --header-color: #eee;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+div.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+div.content {
+    max-width: 850px;
+    margin: 0px auto;
+    padding: 5px 10px;
+}
+
+h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 20px 0;
+}
+
+header p {
+    margin: 2px 0 10px 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main div.content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+main div.info {
+    width: 300px;
+    flex-shrink: 0;
+    margin-top: 20px;
+    /* background-color: var(--header-color); */
+    box-sizing: border-box;
+    padding: 0 0 0 40px;
+    /* margin-left: 20px; */
+    border-left: 1px solid var(--border-color);
+    font-size: 15px;
+}
+
+
+main ul {
+    list-style: none;
+}
+
+main ul li {
+    border-bottom: 1px solid var(--border-color); 
+    padding: 20px 0;
+}
+
+
+main ul li:last-child {
+    border-bottom: none; 
+}
+
+main ul li a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    padding: 6px 8px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #eee;
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+    align-items: center;
+    cursor: move;
+    box-sizing: border-box;
+}
+
+main ul li a:hover {
+    background-color:#ddd;
+}
+
+main ul li a.copied {
+    justify-content: center;
+}
+
+main ul li a.copied span.text {
+    display: none;
+}
+
+main ul li a.copied:before {
+    display: none;
+}
+
+main ul li p {
+    font-size: 15px;
+    margin: 3px 0 12px 0;
+}
+
+main ul li a:before {
+
+    content: "";
+    display: block;
+    width: 20px;
+    height: 14px;
+    background-image: url(images/bookmark-icon.svg)
+}
+
+main div.info h3 {
+    margin: 20px 0 10px 0;
+}
+
+main div.info h3:first-of-type {
+    margin-top: 15px;
+}
+
+main ol {
+    margin: 0;
+    padding: 0;
+}
+
+main ol li {
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #eee;
+    padding: 10px 2%;
+    display: flex;
+    font-size: 13px;
+    font-family: 'Roboto Slab', serif;
+}
+
+footer p {
+    flex-grow: 1;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+footer a {
+    color: black;
+}
+
+
+
+
+/* 
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px 0 70px 0;
+}
+
+div.content {
+    flex-grow: 1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+footer a {
+    width: 100%;
+    max-width: 500px;
+    color: white;
+    background-color: #79a86b;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    padding: 10px;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+ul.letter-pair {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+ul.letter-pair li {
+    text-transform: uppercase;
+    font-size: 100px;
+    padding: 10px;
+    width: 100px;
+    background-color: #79a86b;
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+ul.letter-pair li:last-child {
+    margin-right: 0px;
+}
+
+ul#todays-word li {
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    background-color: #999;
+}
+
+
+div.starting-words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+div.starting-words button {
+    border: none;
+    outline: none;
+    padding: none;
+    margin: none;
+    background: none;
+    font-size: 18px;
+    color: black;
+    padding: 5px;
+}
+
+div.starting-words button:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    border-left: 5px solid transparent;
+    display: inline-block;
+    margin-left: 4px;
+    position: relative;
+    top: -2px;
+}
+
+div.starting-words.expanded button:after {
+    border-right: 5px solid transparent;
+    border-top: none;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid black;
+
+}
+
+
+div.starting-words ul {
+    margin: 10px 0 0 10px;
+    padding: 0;
+    display: none;
+}
+
+div.starting-words ul li {
+    margin: 0;
+    padding: 0;
+}
+
+div.starting-words.expanded ul {
+    display: block;
+} */

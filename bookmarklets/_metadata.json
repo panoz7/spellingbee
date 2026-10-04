@@ -1,0 +1,32 @@
+[
+    {
+        "id": "max-points",
+        "name": "Max Points",
+        "description": "Displays an alert with the number of words, panagrams and total possible points."
+    },
+    {
+        "id": "missing-words",
+        "name": "Missing Words",
+        "description": "Displays an alert with a list of the words that haven't been found yet."
+    },
+    {
+        "id": "word-matrix-all-words",
+        "name": "Word Matrix - All Words",
+        "description": "unknown"
+    },
+        {
+        "id": "word-matrix-missing-words",
+        "name": "Word Matrix - Missing Words",
+        "description": "unknown"
+    },
+    {
+        "id": "first-letters",
+        "name": "First Letters",
+        "description": "Displays an alert with a matrix showing the number of remaining words starting with all possible letter pairs"
+    },
+    {
+        "id": "in-page-data",
+        "name": "In-Page Data",
+        "description": "Adds two automatically updating matricies to the spelling bee page. One lists the number of remaining words starting with all possible letter pairs. The other shows the number of words starting with each letter by word length."
+    }
+]

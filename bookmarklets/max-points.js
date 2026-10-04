@@ -1,0 +1,2 @@
+alert(`Total Words: ${window.gameData.today.answers.length}\n Panagrams: ${window.gameData.today.pangrams.length}\n Max Points: ${window.gameData.today.answers.reduce((acc,cur) => acc + (cur.length == 4 ? 1 : cur.length), 0) + 
+            window.gameData.today.pangrams.reduce((acc, cur) => acc + cur.length, 0)}`)
